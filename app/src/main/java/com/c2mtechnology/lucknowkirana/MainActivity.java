@@ -11,7 +11,7 @@ import android.webkit.WebView;
 public class MainActivity extends AppCompatActivity {
 
     private WebView wv1;
-    private String url = "https://www.lucknowkirana.com";
+    private String url = "https://lucknowkirana01.myomni.in/";
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 //        browser.loadUrl("https://www.lucknowkirana.com");
 
         wv1 = (WebView)findViewById(R.id.webview);
-        wv1.setWebViewClient(new LucknowKirana());
+        wv1.setWebViewClient(new LucknowKirana(this));
 
         wv1.getSettings().setLoadsImagesAutomatically(true);
         wv1.getSettings().setAllowContentAccess(true);
